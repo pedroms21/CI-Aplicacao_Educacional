@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections; // Necess·rio para podermos criar "pausas" no tempo
+using System.Collections;
+using System.Collections.Generic;
 
 public class MenuController : MonoBehaviour
 {
@@ -8,26 +9,58 @@ public class MenuController : MonoBehaviour
     public AudioSource fonteDeAudio;
     public AudioClip somDeClique;
 
-    // Esta È a nova funÁ„o que os botıes v„o chamar
-    public void ClicarBotao(string nomeDaCena)
+    // O hist√≥rico global
+    private static Stack<string> historicoDeCenas = new Stack<string>();
+
+    // 1. BOT√ïES DE AVAN√áAR (Menu -> Ilha -> Sala)
+    public void ClicarBotao(string nomeDaProximaCena)
     {
-        // Toca o som (se os ficheiros estiverem l·)
+        TocarSom();
+        historicoDeCenas.Push(SceneManager.GetActiveScene().name);
+        StartCoroutine(EsperarECarregar(nomeDaProximaCena));
+    }
+
+    // 2. BOT√ïES DE "VOLTAR ATR√ÅS" (Recua apenas um passo)
+    public void ClicarBotaoVoltar()
+    {
+        TocarSom();
+
+        if (historicoDeCenas.Count > 0)
+        {
+            string cenaAnterior = historicoDeCenas.Pop();
+            StartCoroutine(EsperarECarregar(cenaAnterior));
+        }
+        else
+        {
+            Debug.LogWarning("Hist√≥rico vazio! A carregar o Menu Principal.");
+            StartCoroutine(EsperarECarregar("MenuPrincipal")); // Altera se o teu menu tiver outro nome
+        }
+    }
+
+    // 3. NOVO: BOT√ÉO DE "IR PARA O MENU PRINCIPAL" (Volta √† estaca zero)
+    public void VoltarDiretoParaMenu(string nomeDoMenu)
+    {
+        TocarSom();
+        
+        // Limpa todo o hist√≥rico guardado!
+        historicoDeCenas.Clear(); 
+        
+        StartCoroutine(EsperarECarregar(nomeDoMenu));
+    }
+
+    // Fun√ß√£o auxiliar para n√£o repetirmos o c√≥digo do som
+    private void TocarSom()
+    {
         if (fonteDeAudio != null && somDeClique != null)
         {
             fonteDeAudio.PlayOneShot(somDeClique);
         }
-
-        // Inicia a rotina de atraso
-        StartCoroutine(EsperarECarregar(nomeDaCena));
     }
 
-    // FunÁ„o especial (Coroutine) que consegue "parar o tempo"
+    // A tua Coroutine original
     private IEnumerator EsperarECarregar(string nome)
     {
-        // Espera 0.4 segundos. Podes alterar este valor se quiseres!
         yield return new WaitForSeconds(0.4f);
-
-        // Agora sim, muda de cena
         SceneManager.LoadScene(nome);
     }
 }
