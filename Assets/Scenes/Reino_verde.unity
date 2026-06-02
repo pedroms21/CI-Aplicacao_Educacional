@@ -316,9 +316,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 673502454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce5b883fd627004e85d50ca791a8fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 43bf0331de8263b40b20703b3f12513e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotaoVoltar
+  fonteDeAudio: {fileID: 0}
+  somDeClique: {fileID: 0}
 --- !u!4 &673502456
 Transform:
   m_ObjectHideFlags: 0
@@ -417,8 +419,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 673502455}
-        m_TargetAssemblyTypeName: BotaoVoltar, Assembly-CSharp
-        m_MethodName: VoltarCenaAnterior
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ClicarBotaoVoltar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
