@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b748774391e250849be5f56a26bd8a0b
+guid: 6d796a2df6ff0e14c81b48b68d621504
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4089691865190396560
-    second: caminheira_0
+      213: -3803244940338678061
+    second: Chatbox 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: caminheira_0
+      name: Chatbox 1_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 15
-        width: 581
-        height: 1052
+        x: 140
+        y: 339
+        width: 1579
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07d858eaaee7e37c0800000000000000
-      internalID: -4089691865190396560
+      spriteID: 3d6bf4190e8283bc0800000000000000
+      internalID: -3803244940338678061
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      caminheira_0: -4089691865190396560
+      Chatbox 1_0: -3803244940338678061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
