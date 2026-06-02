@@ -937,7 +937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6717837822738516746, guid: 23de7c85c1675394db633c764c628934, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27eda24824b6bea41a9d4cb538c576a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1009,6 +1009,7 @@ MonoBehaviour:
   uiElement: {fileID: 0}
   slideDistance: 800
   slideDuration: 1
+  forcaMola: 1.2
 --- !u!1 &1593812503
 GameObject:
   m_ObjectHideFlags: 0
