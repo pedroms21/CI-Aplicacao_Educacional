@@ -365,52 +365,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491251493}
   m_CullTransparentMesh: 1
---- !u!1 &673502454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 673502456}
-  - component: {fileID: 673502455}
-  m_Layer: 0
-  m_Name: Voltar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &673502455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673502454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43bf0331de8263b40b20703b3f12513e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BotaoVoltar
-  fonteDeAudio: {fileID: 0}
-  somDeClique: {fileID: 0}
---- !u!4 &673502456
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673502454}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 800.20654, y: 507.723, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735831084
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +378,7 @@ GameObject:
   - component: {fileID: 735831087}
   - component: {fileID: 735831086}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Voltar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,7 +447,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 673502455}
+      - m_Target: {fileID: 1267275058}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: ClicarBotaoVoltar
         m_Mode: 1
@@ -746,7 +700,7 @@ GameObject:
   - component: {fileID: 1290528317}
   - component: {fileID: 1290528316}
   m_Layer: 5
-  m_Name: school
+  m_Name: Escola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,14 +716,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1721034714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -608.86, y: 140}
-  m_SizeDelta: {x: 702.2886, y: 496.99}
+  m_AnchoredPosition: {x: -559, y: 120}
+  m_SizeDelta: {x: 860.944, y: 568.3073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290528316
 MonoBehaviour:
@@ -830,16 +784,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1290528316}
-        m_TargetAssemblyTypeName: SchoolButtonAction, Assembly-CSharp
-        m_MethodName: IrParaAula
-        m_Mode: 1
+      - m_Target: {fileID: 1267275058}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ClicarBotao
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Reino_Azul_SalaAula
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1290528318
@@ -862,7 +816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -91903354144237191, guid: 7212dd25bb0a75a448c994f73009caab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a20837a59d7e6e04ba1a115b426b0540, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1108,16 +1062,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1593812505}
-        m_TargetAssemblyTypeName: SchoolButtonAction, Assembly-CSharp
-        m_MethodName: IrParaAula
-        m_Mode: 1
+      - m_Target: {fileID: 1267275058}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ClicarBotao
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Reino_amarelo_SalaJogos
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1593812507
@@ -1347,4 +1301,3 @@ SceneRoots:
   - {fileID: 693625}
   - {fileID: 1721034714}
   - {fileID: 399456786}
-  - {fileID: 673502456}

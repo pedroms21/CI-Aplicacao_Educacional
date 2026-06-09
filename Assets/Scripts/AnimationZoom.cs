@@ -49,9 +49,4 @@ public class SchoolButtonAction : MonoBehaviour, IPointerEnterHandler, IPointerE
         // A variável fica false e o Update() volta a fazer o objeto pulsar automaticamente
     }
 
-    // Função para o evento OnClick do Button
-    public void IrParaAula()
-    {
-        SceneManager.LoadScene("Reino_amarelo_Aula");
-    }
 }
