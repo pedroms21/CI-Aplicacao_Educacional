@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Reino_amarelo_Aula.unity
     guid: c31136186aff28a4a9c695fc820891b8
+  - enabled: 1
+    path: Assets/Scenes/Reino_Verde_Memoria.unity
+    guid: a2e53bf123eb5a34fbbd8209d39fff8f
+  - enabled: 1
+    path: Assets/Scenes/Reino_verde_SalaJogos.unity
+    guid: c6b0b952aaca4724db8ca165291dd411
+  - enabled: 1
+    path: Assets/Scenes/Reino_verde_jogo.unity
+    guid: 84e196bc6603c7840a9da56dbcffe931
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
