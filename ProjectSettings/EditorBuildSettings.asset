@@ -35,6 +35,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino_verde_jogo.unity
     guid: 84e196bc6603c7840a9da56dbcffe931
+  - enabled: 1
+    path: Assets/Scenes/Reino_verde_aprendizagem.unity
+    guid: 579838da71a6ffa4d9e286a9cae8ab26
+  - enabled: 1
+    path: Assets/Scenes/Reino_vermelha_SalaJogos.unity
+    guid: 31e89d9e17f3c094982dcc73c24ec997
+  - enabled: 1
+    path: Assets/Scenes/Reino_vermelho_apanhada.unity
+    guid: 5761faeaf2c0e4e4b89bc5a88a729356
+  - enabled: 1
+    path: Assets/Scenes/Reino_vermelho_jogo.unity
+    guid: 922440b8f3146cc4aad6dd9b020abf90
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
