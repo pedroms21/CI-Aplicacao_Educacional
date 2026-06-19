@@ -1,56 +1,68 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Obrigatório para o novo sistema!
+using UnityEngine.InputSystem;
+using System.Collections; // Obrigatório para usarmos o "Temporizador" do piscar
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Configurações do Jogador")]
-    public float speed = 10f;
     public float screenLimit = 8.5f; 
 
-    // Variável para guardar a nossa ação de movimento
-    private InputAction moveAction;
+    [Header("Efeitos Visuais")]
+    public ParticleSystem particulasErro; // Onde vamos colocar o nosso efeito
+    private SpriteRenderer spriteRenderer;
+    private Color corOriginal = Color.white;
 
-    void Awake()
+    private Camera mainCamera;
+
+    void Start()
     {
-        // 1. Criar a ação de movimento por código (sem precisar do Inspector)
-        moveAction = new InputAction("Move");
-
-        // 2. Adicionar as teclas (Setas Esquerda/Direita e teclas A/D)
-        moveAction.AddCompositeBinding("1DAxis")
-            .With("Negative", "<Keyboard>/leftArrow")
-            .With("Positive", "<Keyboard>/rightArrow")
-            .With("Negative", "<Keyboard>/a")
-            .With("Positive", "<Keyboard>/d");
-    }
-
-    // O novo sistema obriga a ligar e desligar os controlos
-    void OnEnable()
-    {
-        moveAction.Enable();
-    }
-
-    void OnDisable()
-    {
-        moveAction.Disable();
+        mainCamera = Camera.main;
+        
+        // Vai buscar o componente de imagem da Arca e guarda a cor normal dela
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) 
+        {
+            corOriginal = spriteRenderer.color;
+        }
     }
 
     void Update()
     {
-        // 3. Ler o valor (-1 para esquerda, 1 para direita, 0 para parado)
-        float horizontalInput = moveAction.ReadValue<float>();
-
-        // 4. Mover o balde
-        Vector3 moveDirection = new Vector3(horizontalInput, 0, 0);
-        transform.Translate(moveDirection * speed * Time.deltaTime);
-
-        // 5. Impedir que o balde saia pelas laterais do ecrã
-        if (transform.position.x > screenLimit)
+        if (Pointer.current != null)
         {
-            transform.position = new Vector3(screenLimit, transform.position.y, 0);
+            Vector2 pointerScreenPosition = Pointer.current.position.ReadValue();
+            Vector3 pointerWorldPosition = mainCamera.ScreenToWorldPoint(pointerScreenPosition);
+            float targetX = Mathf.Clamp(pointerWorldPosition.x, -screenLimit, screenLimit);
+            transform.position = new Vector3(targetX, transform.position.y, transform.position.z);
         }
-        else if (transform.position.x < -screenLimit)
+    }
+
+    // --- FUNÇÕES DE EFEITOS VISUAIS ---
+
+    public void EfeitoSaudavel()
+    {
+        StartCoroutine(PiscarCor(Color.green));
+    }
+
+    public void EfeitoErro()
+    {
+        StartCoroutine(PiscarCor(Color.red));
+        
+        // Dispara a explosão de partículas!
+        if (particulasErro != null)
         {
-            transform.position = new Vector3(-screenLimit, transform.position.y, 0);
+            particulasErro.Play();
+        }
+    }
+
+    // Temporizador que muda a cor e volta ao normal
+    private IEnumerator PiscarCor(Color corDoPiscar)
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = corDoPiscar; // Pinta a arca
+            yield return new WaitForSeconds(0.15f); // Espera um milésimo de segundo
+            spriteRenderer.color = corOriginal; // Volta ao normal
         }
     }
 }

@@ -58,9 +58,16 @@ public class MenuController : MonoBehaviour
     }
 
     // A tua Coroutine original
+    // A tua Coroutine corrigida
     private IEnumerator EsperarECarregar(string nome)
     {
-        yield return new WaitForSeconds(0.4f);
+        // 1. Espera 0.4s usando o tempo REAL (ignora o Time.timeScale = 0)
+        yield return new WaitForSecondsRealtime(0.4f);
+        
+        // 2. MUITO IMPORTANTE: Descongela o jogo antes de carregar a próxima cena
+        Time.timeScale = 1f; 
+        
+        // 3. Muda de cena
         SceneManager.LoadScene(nome);
     }
 }

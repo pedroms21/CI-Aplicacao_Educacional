@@ -9,14 +9,12 @@ public class AzulGameManager : MonoBehaviour
     [Header("Estatísticas")]
     public int score = 0;
     public int lives = 3;
-    public int scoreToWin = 400; // Atualizado para a tua meta!
+    public int scoreToWin = 400;
 
     [Header("Aumento de Dificuldade")]
-    public int scoreMilestone = 80; // A cada 80 pontos...
-    private int nextMilestone; // Guarda o próximo objetivo (80, 160, 240...)
-    public PlayerController playerController; // Ligação à tua Arca
-    public float playerSpeedBoost = 2f; // Quanto a arca fica mais rápida
-    public float gravityMultiplier = 1.25f; // A gravidade aumenta 25%
+    public int scoreMilestone = 80; 
+    private int nextMilestone; 
+    public float gravityMultiplier = 1.25f; 
 
     [Header("Interface (UI)")]
     public TextMeshProUGUI scoreText;
@@ -26,22 +24,33 @@ public class AzulGameManager : MonoBehaviour
     public GameObject endGamePanel;
     public TextMeshProUGUI endGameText;
 
+    // --- NOVA SECÇÃO DE SOM ---
+    [Header("Sons")]
+    public AudioClip somSaudavel;
+    public AudioClip somErro;
+    private AudioSource audioSource;
+    // --------------------------
+
     private bool isGameOver = false;
-    private Vector2 defaultGravity = new Vector2(0, -9.81f); // A gravidade normal do Unity
+    private Vector2 defaultGravity = new Vector2(0, -9.81f);
 
     void Awake()
     {
         if (instance == null) instance = this;
+        
+        // Vai buscar o componente de áudio que vamos adicionar a seguir
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) 
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     void Start()
     {
         Time.timeScale = 1f; 
-        
-        // MUITO IMPORTANTE: Reinicia a gravidade sempre que o nível começa!
         Physics2D.gravity = defaultGravity; 
-        
-        nextMilestone = scoreMilestone; // O primeiro marco é aos 80
+        nextMilestone = scoreMilestone; 
 
         if (endGamePanel != null) endGamePanel.SetActive(false);
         UpdateUI();
@@ -53,15 +62,16 @@ public class AzulGameManager : MonoBehaviour
 
         score += amount;
         UpdateUI();
+        
+        // Toca o som positivo!
+        if (somSaudavel != null) audioSource.PlayOneShot(somSaudavel);
 
-        // Verifica se chegámos aos 80, 160, 240, etc...
         if (score >= nextMilestone)
         {
             IncreaseDifficulty();
-            nextMilestone += scoreMilestone; // Define o próximo marco
+            nextMilestone += scoreMilestone; 
         }
 
-        // Verifica se ganhámos!
         if (score >= scoreToWin)
         {
             EndGame(true);
@@ -70,16 +80,8 @@ public class AzulGameManager : MonoBehaviour
 
     void IncreaseDifficulty()
     {
-        // 1. Aumenta a velocidade da tua Arca
-        if (playerController != null)
-        {
-            playerController.speed += playerSpeedBoost;
-        }
-
-        // 2. Aumenta a velocidade de queda (Gravidade mais forte!)
         Physics2D.gravity = new Vector2(0, Physics2D.gravity.y * gravityMultiplier);
-        
-        Debug.Log("Dificuldade Aumentada! Pontos: " + score);
+        Debug.Log("Dificuldade Aumentada! Gravidade: " + Physics2D.gravity.y);
     }
 
     public void LoseLife(int amount)
@@ -90,6 +92,9 @@ public class AzulGameManager : MonoBehaviour
         if (lives < 0) lives = 0;
         
         UpdateUI();
+        
+        // Toca o som de erro!
+        if (somErro != null) audioSource.PlayOneShot(somErro);
         
         if (lives == 0)
         {
@@ -124,7 +129,7 @@ public class AzulGameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Physics2D.gravity = defaultGravity; // Prevenção para garantir que não reinicia ultra-rápido
+        Physics2D.gravity = defaultGravity; 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
