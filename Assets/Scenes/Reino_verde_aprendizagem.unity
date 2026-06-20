@@ -2995,7 +2995,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 929167262}
         m_TargetAssemblyTypeName: LessonManager, Assembly-CSharp
         m_MethodName: AvancarSlide
         m_Mode: 1
