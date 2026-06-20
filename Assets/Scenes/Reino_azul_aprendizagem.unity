@@ -2336,8 +2336,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Bem-vindo \xE0 sala de aula. Sabias que os legumes e vegetais t\xEAm
-    super poderes? Vamos investigar como as vitaminas te ajudam a crescer forte!"
+  m_text: "Bem-vindo \xE0 sala de aula! Sabias que o leite, o queijo e o iogurte
+    t\xEAm superpoderes escondidos? Vamos investigar como o C\xE1lcio funciona como
+    magia para te ajudar a crescer com uns ossos super fortes!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
