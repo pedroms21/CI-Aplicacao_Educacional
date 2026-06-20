@@ -652,7 +652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &491251494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1255619174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -899,9 +899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bem-vindo ao Reino Amarelo! O p\xE3o, a massa e a batata s\xE3o um combust\xEDvel
-    fant\xE1stico que te d\xE1 muita energia para brincares o dia todo. Escolhe um
-    caminho e vamos l\xE1!"
+  m_text: "Bem-vindo \xE1 sala de Jogos!\nClica em JOGAR para te divertires!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
