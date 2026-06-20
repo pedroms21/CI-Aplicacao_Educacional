@@ -38,14 +38,14 @@ public class MenuController : MonoBehaviour
     }
 
     // 3. NOVO: BOTÃO DE "IR PARA O MENU PRINCIPAL" (Volta à estaca zero)
-    public void VoltarDiretoParaMenu(string nomeDoMenu)
+    public void VoltarDiretoParaMenu(string MainScene)
     {
         TocarSom();
         
         // Limpa todo o histórico guardado!
         historicoDeCenas.Clear(); 
         
-        StartCoroutine(EsperarECarregar(nomeDoMenu));
+        StartCoroutine(EsperarECarregar(MainScene));
     }
 
     // Função auxiliar para não repetirmos o código do som
