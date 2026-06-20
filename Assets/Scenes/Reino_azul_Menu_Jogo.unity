@@ -1537,9 +1537,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Desliza da esquerda para a direita no ecr\xE3. A arca vai seguir-te para
-    todo o lado! Apanha a \xE1gua que cai do c\xE9u para enchermos a a nossa arca!
-    \nAten\xE7\xE3o!!! Evita as bebidas que nos fazem mal!"
+  m_text: "Instru\xE7\xF5es: \nDesliza a nossa arca para a esquerda e para a direita
+    para apanhar o leite que cai do c\xE9u! \nAten\xE7\xE3o!!! Evita os refrigerantes,
+    fazem-nos mal!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
