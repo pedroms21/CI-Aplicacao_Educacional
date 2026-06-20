@@ -554,9 +554,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bem-vindo ao Reino Amarelo! O p\xE3o, a massa e a batata s\xE3o um combust\xEDvel
-    fant\xE1stico que te d\xE1 muita energia para brincares o dia todo. Escolhe um
-    caminho e vamos l\xE1!"
+  m_text: "Bem-vindo ao Reino Vermelho! A carne, o peixe e os ovos s\xE3o fant\xE1sticos
+    para fazer os teus m\xFAsculos crescerem fortes e cheios de for\xE7a para todas
+    as tuas aventuras. Escolhe um caminho e vamos l\xE1!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
@@ -1071,7 +1071,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Reino_amarelo_SalaJogos
+          m_StringArgument: Reino_vermelho_jogo
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1593812507

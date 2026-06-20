@@ -42,8 +42,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino_vermelha_SalaJogos.unity
     guid: 31e89d9e17f3c094982dcc73c24ec997
   - enabled: 1
-    path: Assets/Scenes/Reino_vermelho_apanhada.unity
+    path: Assets/Scenes/Reino_vermelho_apanhada_N1.unity
     guid: 5761faeaf2c0e4e4b89bc5a88a729356
+  - enabled: 1
+    path: Assets/Scenes/Reino_vermelho_apanhada_N2.unity
+    guid: 549ef907b3fe0cc4ca44337eb9d93598
+  - enabled: 1
+    path: Assets/Scenes/Reino_vermelho_apanhada_N3.unity
+    guid: c7cc9766f171d1344b54d5fbb2f03cf1
   - enabled: 1
     path: Assets/Scenes/Reino_vermelho_jogo.unity
     guid: 922440b8f3146cc4aad6dd9b020abf90

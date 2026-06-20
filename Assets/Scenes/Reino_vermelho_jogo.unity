@@ -369,9 +369,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 904898931}
-        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
-        m_MethodName: EscolherNivelMedio
+      - m_Target: {fileID: 352527978}
+        m_TargetAssemblyTypeName: SelecaoNiveis, Assembly-CSharp
+        m_MethodName: CarregarNivelMedio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -419,6 +419,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300781454}
   m_CullTransparentMesh: 1
+--- !u!1 &352527977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 352527979}
+  - component: {fileID: 352527978}
+  m_Layer: 0
+  m_Name: GeradorMenuNiveis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &352527978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352527977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b35dfa69f88b94991a5220778630a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelecaoNiveis
+--- !u!4 &352527979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352527977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 296.3949, y: 213.99168, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399456783
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,9 +625,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 904898931}
-        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
-        m_MethodName: EscolherNivelFacil
+      - m_Target: {fileID: 352527978}
+        m_TargetAssemblyTypeName: SelecaoNiveis, Assembly-CSharp
+        m_MethodName: CarregarNivelFacil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -857,12 +901,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ClicarBotaoVoltar
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1437,9 +1481,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 904898931}
-        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
-        m_MethodName: EscolherNivelDificil
+      - m_Target: {fileID: 352527978}
+        m_TargetAssemblyTypeName: SelecaoNiveis, Assembly-CSharp
+        m_MethodName: CarregarNivelDificil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1651,9 +1695,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bem-vindo \xE0 sala de jogos! Aqui podes fazer o jogo da mem\xF3ria, temos
-    3 n\xEDveis de dificuldade. As diferen\xE7as entre n\xEDveis s\xE3o na quantidade
-    de cartas e no tempo para resolver."
+  m_text: "Bem-vindo \xE0 sala de jogos! Aqui podes testar os teus reflexos no Jogo
+    da Apanhada, temos 3 n\xEDveis de dificuldade. As diferen\xE7as entre n\xEDveis
+    s\xE3o na rapidez com que os alimentos aparecem e na quantidade de intrusos para
+    te tentar enganar!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
@@ -2016,3 +2061,4 @@ SceneRoots:
   - {fileID: 1721034714}
   - {fileID: 399456786}
   - {fileID: 673502456}
+  - {fileID: 352527979}
