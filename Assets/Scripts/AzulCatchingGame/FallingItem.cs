@@ -27,15 +27,18 @@ public class FallingItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Pega no script da Arca para ativar os efeitos
+            PlayerController arca = other.GetComponent<PlayerController>();
+
             if (isHealthy)
             {
-                // Dá 10 pontos!
                 AzulGameManager.instance.AddScore(10);
+                if (arca != null) arca.EfeitoSaudavel(); // Brilha Verde!
             }
             else
             {
-                // Tira 1 vida!
                 AzulGameManager.instance.LoseLife(1);
+                if (arca != null) arca.EfeitoErro(); // Brilha Vermelho e Partículas!
             }
 
             Destroy(gameObject);

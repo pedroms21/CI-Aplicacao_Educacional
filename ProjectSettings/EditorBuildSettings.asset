@@ -22,14 +22,14 @@ EditorBuildSettings:
     guid: dc9040fb523e0b5419ae0c613a5d146c
   - enabled: 1
     path: Assets/Scenes/Reino_amarelo_SalaJogos.unity
-    guid: 0dc31a98603dab1469601f3abf7f0490
+    guid: d75d025cf69a047488ad2bd149d51723
   - enabled: 0
     path: Assets/Scenes/Reino_amarelo_Aula.unity
     guid: c31136186aff28a4a9c695fc820891b8
   - enabled: 1
     path: Assets/Scenes/Reino_Verde_Memoria.unity
     guid: a2e53bf123eb5a34fbbd8209d39fff8f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Reino_verde_SalaJogos.unity
     guid: c6b0b952aaca4724db8ca165291dd411
   - enabled: 1
@@ -38,8 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino_verde_aprendizagem.unity
     guid: 579838da71a6ffa4d9e286a9cae8ab26
-  - enabled: 1
-    path: Assets/Scenes/Reino_vermelha_SalaJogos.unity
+  - enabled: 0
+    path: Assets/Scenes/Reino_vermelh_SalaJogos.unity
     guid: 31e89d9e17f3c094982dcc73c24ec997
   - enabled: 1
     path: Assets/Scenes/Reino_vermelho_apanhada_N1.unity
@@ -53,6 +53,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino_vermelho_jogo.unity
     guid: 922440b8f3146cc4aad6dd9b020abf90
+  - enabled: 1
+    path: Assets/Scenes/Reino_azul_Jogo_Nivel1.unity
+    guid: 4ea135ec9b8ff4c43937e2796a4b3701
+  - enabled: 1
+    path: Assets/Scenes/Reino_azul_Jogo_Nivel2.unity
+    guid: f18ab6abc0b428a46a34a932075ba7db
+  - enabled: 1
+    path: Assets/Scenes/Reino_azul_Jogo_Nivel3.unity
+    guid: e900c4a52f5ea6949bfa50b2b7ce1238
+  - enabled: 1
+    path: Assets/Scenes/Reino_azul_SalaJogos.unity
+    guid: 1c6e10388cc7bd74fb6bd579ada6304d
+  - enabled: 1
+    path: Assets/Scenes/Reino_azul_Menu_Jogo.unity
+    guid: bea42fd1e246ac949a141fd3232aa7ad
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

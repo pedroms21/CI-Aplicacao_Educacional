@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b30f77b6bbd2cf4a888d07c483dca38
+guid: 6258b401c49f48f4896c8899a1bc8bc7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6226548139355918459
-    second: bg_jogo_0
+      213: 2411061043747163178
+    second: salajogos_amarelo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg_jogo_0
+      name: salajogos_amarelo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1333
-        height: 750
+        width: 1672
+        height: 941
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58f22d8f47bd699a0800000000000000
-      internalID: -6226548139355918459
+      spriteID: a2c0554be3fc57120800000000000000
+      internalID: 2411061043747163178
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bg_jogo_0: -6226548139355918459
+      salajogos_amarelo_0: 2411061043747163178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

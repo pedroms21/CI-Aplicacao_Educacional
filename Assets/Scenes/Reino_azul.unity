@@ -449,14 +449,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1267275058}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ClicarBotaoVoltar
-        m_Mode: 1
+        m_MethodName: ClicarBotao
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &735831087
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bem-vindo ao Reino Amarelo! O p\xE3o, a massa e a batata s\xE3o um combust\xEDvel
-    fant\xE1stico que te d\xE1 muita energia para brincares o dia todo. Escolhe um
-    caminho e vamos l\xE1!"
+  m_text: "Bem-vindo ao Reino Azul! A \xE1gua e os latic\xEDnios s\xE3o como uma
+    po\xE7\xE3o m\xE1gica que te mant\xE9m sempre hidratado e constr\xF3i ossos fortes
+    como pedra. Escolhe um caminho e mergulha nesta aventura!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
@@ -1071,7 +1071,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Reino_amarelo_SalaJogos
+          m_StringArgument: Reino_azul_SalaJogos
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1593812507
