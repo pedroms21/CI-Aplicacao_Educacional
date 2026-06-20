@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino_verde_aprendizagem.unity
     guid: 579838da71a6ffa4d9e286a9cae8ab26
   - enabled: 0
-    path: Assets/Scenes/Reino_vermelh_SalaJogos.unity
+    path: Assets/Scenes/Reino_vermelha_SalaJogos.unity
     guid: 31e89d9e17f3c094982dcc73c24ec997
   - enabled: 1
     path: Assets/Scenes/Reino_vermelho_apanhada_N1.unity
