@@ -295,8 +295,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1110310424}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ClicarBotaoVoltar
-        m_Mode: 1
+        m_MethodName: ClicarBotao
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1415,11 +1415,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1373215954}
-  - {fileID: 236308256}
   - {fileID: 1110310425}
-  - {fileID: 375365981}
   - {fileID: 1290528315}
   - {fileID: 1593812504}
+  - {fileID: 375365981}
+  - {fileID: 236308256}
   - {fileID: 1497288571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
