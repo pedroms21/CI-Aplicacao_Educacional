@@ -54,6 +54,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino_vermelho_jogo.unity
     guid: 922440b8f3146cc4aad6dd9b020abf90
   - enabled: 1
+    path: Assets/Scenes/Reino_vermelho_SalaJogos.unity
+    guid: 1fd95c0e52bc5e5419ed69b02172d919
+  - enabled: 1
+    path: Assets/Scenes/Reino_vermelho_aprendizagem.unity
+    guid: 06b92e73d7c51e64591dca965a50fd78
+  - enabled: 1
     path: Assets/Scenes/Reino_azul_Jogo_Nivel1.unity
     guid: 4ea135ec9b8ff4c43937e2796a4b3701
   - enabled: 1
