@@ -15,23 +15,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino_amarelo.unity
     guid: 72344af0c1b3d9148b9ab28b0b735515
   - enabled: 1
+    path: Assets/Scenes/Reino_amarelo_SalaAula.unity
+    guid: 34c1eb596e7314441a7bf1c4920fa5de
+  - enabled: 1
+    path: Assets/Scenes/Reino_amarelo_Jogo.unity
+    guid: 9f36308b2d6b8824b9aafd4c9cea303f
+  - enabled: 1
+    path: Assets/Scenes/Reino_amarelo_SalaJogos.unity
+    guid: a0715b496d001a942bbb60ae28c97fc4
+  - enabled: 1
     path: Assets/Scenes/Reino_amarelo_Jogo_Nivel1.unity
     guid: 3178a1ebb768e7f4f91428a719d1f4db
   - enabled: 1
     path: Assets/Scenes/Reino_amarelo_Jogo_Nivel2.unity
-    guid: d487297f09ec9314a97c6fa0263290a1
+    guid: da151c2ee1b7f424a8946c74559c5aa8
   - enabled: 1
     path: Assets/Scenes/Reino_amarelo_Jogo_Nivel3.unity
-    guid: f1ee9f8d72a61a3429e6673a6524d088
+    guid: 155abdb8140b2ee4ab54fdc346369d2d
   - enabled: 1
     path: Assets/Scenes/Reino_verde.unity
     guid: cda635bb825247e4da397f2406e93d25
   - enabled: 1
     path: Assets/Scenes/Reino_vermelho.unity
     guid: dc9040fb523e0b5419ae0c613a5d146c
-  - enabled: 1
-    path: Assets/Scenes/Reino_amarelo_SalaJogos.unity
-    guid: d75d025cf69a047488ad2bd149d51723
   - enabled: 0
     path: Assets/Scenes/Reino_amarelo_Aula.unity
     guid: c31136186aff28a4a9c695fc820891b8
