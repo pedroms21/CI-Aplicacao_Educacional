@@ -268,9 +268,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ol\xE1, pequenos exploradores! Bem-vindos ao Reino Amarelo da Roda dos
-    Alimentos! Aqui \xE9 a casa dos Cereais e dos Tub\xE9rculos. Sabiam que o vosso
-    p\xE3ozinho de todos os dias vive aqui?"
+  m_text: "Bem-vindos ao Reino Amarelo! Aqui \xE9 a casa dos Cereais e dos Tub\xE9rculos.
+    Sabiam que o  p\xE3o que comem vive aqui?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
@@ -3034,7 +3033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Como fica a 'bateria' do nosso corpo depois de comer os alimentos do Reino
+  m_text: Como fica a "bateria" do nosso corpo depois de comer os alimentos do Reino
     Amarelo?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
@@ -4889,8 +4888,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Estes alimentos s\xE3o como as baterias do nosso corpo! Eles d\xE3o-nos
-    a energia que precisamos para brincar, correr muito no recreio e ter for\xE7a
-    para aprender coisas novas na escola. Sem eles, ficamos muito cansados!"
+    a energia que precisamos para brincar, e ter for\xE7a para aprender coisas novas
+    na escola. Sem eles, ficamos muito cansados!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
