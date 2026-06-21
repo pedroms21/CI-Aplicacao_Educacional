@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 534918351}
   - component: {fileID: 534918352}
   m_Layer: 5
-  m_Name: Niveis
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!1 &650224702
+--- !u!1 &677844614
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -573,42 +573,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 650224704}
-  - component: {fileID: 650224703}
-  m_Layer: 0
-  m_Name: ControladorDeNiveis
+  - component: {fileID: 677844616}
+  - component: {fileID: 677844615}
+  m_Layer: 5
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &650224703
+--- !u!114 &677844615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650224702}
+  m_GameObject: {fileID: 677844614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bbe8ef283ba9b4c9f23a4685184ca5, type: 3}
+  m_Script: {fileID: 11500000, guid: ca53966036b885942a518b5b1a017cd3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuAmarelo
---- !u!4 &650224704
-Transform:
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelector
+  nomeCenaJogo: Reino_Verde_Memoria
+--- !u!224 &677844616
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650224702}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 813.9844, y: 728.89874, z: 0}
+  m_GameObject: {fileID: 677844614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 960, y: 540}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &735831084
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +759,7 @@ GameObject:
   - component: {fileID: 1110275817}
   - component: {fileID: 1110275816}
   m_Layer: 5
-  m_Name: nivel2
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,9 +829,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650224703}
-        m_TargetAssemblyTypeName: MenuAmarelo, Assembly-CSharp
-        m_MethodName: EscolherNivel2
+      - m_Target: {fileID: 677844615}
+        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+        m_MethodName: EscolherNivelMedio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1286,7 +1291,7 @@ GameObject:
   - component: {fileID: 1374274148}
   - component: {fileID: 1374274147}
   m_Layer: 5
-  m_Name: nivel3
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1356,9 +1361,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650224703}
-        m_TargetAssemblyTypeName: MenuAmarelo, Assembly-CSharp
-        m_MethodName: EscolherNivel3
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+        m_MethodName: EscolherNivelDificil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1549,7 +1554,7 @@ GameObject:
   - component: {fileID: 1706422287}
   - component: {fileID: 1706422286}
   m_Layer: 5
-  m_Name: nivel1
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1619,9 +1624,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650224703}
-        m_TargetAssemblyTypeName: MenuAmarelo, Assembly-CSharp
-        m_MethodName: EscolherNivel1
+      - m_Target: {fileID: 677844615}
+        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+        m_MethodName: EscolherNivelFacil
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1918,5 +1923,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 693625}
   - {fileID: 1721034714}
-  - {fileID: 650224704}
+  - {fileID: 677844616}
   - {fileID: 399456786}

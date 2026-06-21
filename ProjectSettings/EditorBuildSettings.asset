@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Reino_amarelo.unity
     guid: 72344af0c1b3d9148b9ab28b0b735515
   - enabled: 1
+    path: Assets/Scenes/Reino_amarelo_Jogo_Nivel1.unity
+    guid: 3178a1ebb768e7f4f91428a719d1f4db
+  - enabled: 1
+    path: Assets/Scenes/Reino_amarelo_Jogo_Nivel2.unity
+    guid: d487297f09ec9314a97c6fa0263290a1
+  - enabled: 1
+    path: Assets/Scenes/Reino_amarelo_Jogo_Nivel3.unity
+    guid: f1ee9f8d72a61a3429e6673a6524d088
+  - enabled: 1
     path: Assets/Scenes/Reino_verde.unity
     guid: cda635bb825247e4da397f2406e93d25
   - enabled: 1
