@@ -2,44 +2,70 @@ using UnityEngine;
 using UnityEngine.Video;
 
 [RequireComponent(typeof(VideoPlayer))]
+[RequireComponent(typeof(AudioSource))]
 public class WebGLVideoSetup : MonoBehaviour
 {
     [Header("Video File Setup")]
-    [Tooltip("Nome do ficheiro de vídeo na pasta StreamingAssets (ex: VideoDoLeite.mp4)")]
     public string videoFileName;
 
     [Header("UI Elements")]
-    [Tooltip("Arraste o botão de Play da Hierarchy para aqui")]
-    public GameObject playButton; // Referência para o botão
+    public GameObject playButton;
 
     private VideoPlayer videoPlayer;
+    private AudioSource audioSource;
 
     void Awake()
     {
-        // Vai buscar o VideoPlayer logo no início
         videoPlayer = GetComponent<VideoPlayer>();
+        audioSource = GetComponent<AudioSource>();
+
+        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.SetTargetAudioSource(0, audioSource);
     }
 
     void Start()
     {
-        // Configura o caminho do vídeo (URL para WebGL)
         videoPlayer.source = VideoSource.Url;
         videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
+
+        // AVISAR QUANDO COMEÇA E ACABA:
+        videoPlayer.started += QuandoOVideoComecar;
+        videoPlayer.loopPointReached += QuandoOVideoAcabar; // loopPointReached significa "chegou ao fim"
     }
 
-    // O OnEnable é executado SEMPRE que este objeto (o ecrã) é ativado/aparece no jogo
-    void OnEnable()
+    // Quando clicas play e o vídeo arranca
+    void QuandoOVideoComecar(VideoPlayer vp)
     {
-        // 1. Faz o botão Play voltar a aparecer
-        if (playButton != null)
+        if (MusicaFundo.instancia != null)
         {
-            playButton.SetActive(true);
+            MusicaFundo.instancia.PausarMusica();
+        }
+    }
+
+    // Quando o vídeo chega ao último segundo
+    void QuandoOVideoAcabar(VideoPlayer vp)
+    {
+        if (MusicaFundo.instancia != null)
+        {
+            MusicaFundo.instancia.RetomarMusica();
         }
 
-        // 2. Faz reset ao vídeo para garantir que ele não fica a meio quando voltamos
-        if (videoPlayer != null)
+        // (Opcional) Fazer o botão de play voltar a aparecer no fim
+        if (playButton != null) playButton.SetActive(true);
+    }
+
+    void OnEnable()
+    {
+        if (playButton != null) playButton.SetActive(true);
+        if (videoPlayer != null) videoPlayer.Stop();
+    }
+
+    // SEGURANÇA: Se a criança fechar o slide ou saltar a cena antes do vídeo acabar, a música volta!
+    void OnDisable()
+    {
+        if (MusicaFundo.instancia != null)
         {
-            videoPlayer.Stop();
+            MusicaFundo.instancia.RetomarMusica();
         }
     }
 }
