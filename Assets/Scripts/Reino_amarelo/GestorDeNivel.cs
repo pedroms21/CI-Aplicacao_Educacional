@@ -11,7 +11,7 @@ public class GestorDeNivel : MonoBehaviour
     public bool usarVidas = true;
     public int vidasMaximas = 3;
     private int vidasAtuais;
-    public TextMeshProUGUI textoVidas; // Local onde vai aparecer "Vidas: 3"
+    public TextMeshProUGUI textoVidas; 
 
     [Header("Temporizador (Para o Nível 3)")]
     public bool usarTemporizador = false;
@@ -23,17 +23,26 @@ public class GestorDeNivel : MonoBehaviour
     public GameObject painelVitoria;
     public GameObject painelDerrota;
 
+    [Header("Efeitos Sonoros")]
+    public AudioClip somAcerto;
+    public AudioClip somErro;
+    public AudioClip somVitoria;
+    public AudioClip somDerrota; 
+    
+    private AudioSource leitorDeSom;
+
     private bool jogoAdecorrer = false;
 
     void Start()
     {
+        leitorDeSom = GetComponent<AudioSource>();
+
         tempoAtual = tempoMaximo;
         vidasAtuais = vidasMaximas;
 
         if (painelVitoria) painelVitoria.SetActive(false);
         if (painelDerrota) painelDerrota.SetActive(false);
         
-        // Esconder ou mostrar os textos no ecrã consoante as configurações
         if (textoDoTempo != null) textoDoTempo.gameObject.SetActive(usarTemporizador);
         if (textoVidas != null) 
         {
@@ -44,7 +53,6 @@ public class GestorDeNivel : MonoBehaviour
 
     void Update()
     {
-        // Só corre o tempo se estiver ligado e o jogo a decorrer
         if (usarTemporizador && jogoAdecorrer)
         {
             tempoAtual -= Time.deltaTime;
@@ -61,18 +69,27 @@ public class GestorDeNivel : MonoBehaviour
 
     public void AdicionarAcerto()
     {
-        if (!jogoAdecorrer) return; // Se o jogo já acabou, ignora
+        if (!jogoAdecorrer) return; 
 
-        acertosAtuais++;
+        acertosAtuais++; // Primeiro adicionamos o ponto
+
+        // Depois verificamos se é o último ponto
         if (acertosAtuais >= totalParaGanhar)
         {
-            Vitoria();
+            Vitoria(); // Vai para a vitória (e toca apenas o som de vitória)
+        }
+        else
+        {
+            // Se NÃO for o último ponto, toca o som de acerto normal
+            if (somAcerto != null && leitorDeSom != null) leitorDeSom.PlayOneShot(somAcerto);
         }
     }
 
     public void PerderVida()
     {
-        if (!jogoAdecorrer || !usarVidas) return; // Só perde vida se o sistema estiver ligado
+        if (!jogoAdecorrer || !usarVidas) return; 
+
+        if (somErro != null && leitorDeSom != null) leitorDeSom.PlayOneShot(somErro);
 
         vidasAtuais--;
         AtualizarTextoVidas();
@@ -96,16 +113,20 @@ public class GestorDeNivel : MonoBehaviour
     {
         jogoAdecorrer = false;
         if (painelVitoria) painelVitoria.SetActive(true);
+
+        if (somVitoria != null && leitorDeSom != null) leitorDeSom.PlayOneShot(somVitoria);
     }
 
     void Derrota()
     {
         jogoAdecorrer = false;
         if (painelDerrota) painelDerrota.SetActive(true);
+
+        if (somDerrota != null && leitorDeSom != null) leitorDeSom.PlayOneShot(somDerrota);
     }
 
     public void IniciarJogo()
-{
-    jogoAdecorrer = true;
-}
+    {
+        jogoAdecorrer = true;
+    }
 }
