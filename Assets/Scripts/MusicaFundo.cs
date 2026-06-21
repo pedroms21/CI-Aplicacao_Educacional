@@ -2,21 +2,33 @@ using UnityEngine;
 
 public class MusicaFundo : MonoBehaviour
 {
-    // Guarda a memória de quem é o leitor de música original
-    private static MusicaFundo instancia;
+    // O 'public static' permite que qualquer script no jogo fale com esta música!
+    public static MusicaFundo instancia;
+    private AudioSource meuAudio;
 
     void Awake()
     {
-        // Se ainda não existir nenhum leitor de música...
         if (instancia == null)
         {
-            instancia = this; // Eu sou o original!
-            DontDestroyOnLoad(gameObject); // Protege-me para não ser destruído ao mudar de cena
+            instancia = this;
+            DontDestroyOnLoad(gameObject);
+            meuAudio = GetComponent<AudioSource>();
         }
         else
         {
-            // Se já houver uma música a tocar e eu for uma cópia (por exemplo, voltaste ao Menu), destrói-me!
             Destroy(gameObject);
         }
+    }
+
+    // Função para o vídeo mandar pausar
+    public void PausarMusica()
+    {
+        if (meuAudio != null) meuAudio.Pause();
+    }
+
+    // Função para o vídeo mandar recomeçar
+    public void RetomarMusica()
+    {
+        if (meuAudio != null) meuAudio.UnPause();
     }
 }
