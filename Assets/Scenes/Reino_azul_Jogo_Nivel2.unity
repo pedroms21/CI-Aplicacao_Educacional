@@ -7114,7 +7114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1433459397}
         m_TargetAssemblyTypeName: AzulGameManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -7247,7 +7247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1267275058}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: ClicarBotao
         m_Mode: 5
