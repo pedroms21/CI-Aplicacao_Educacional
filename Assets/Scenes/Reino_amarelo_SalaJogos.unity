@@ -899,7 +899,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bem-vindo \xE1 sala de Jogos!\nClica em JOGAR para te divertires!"
+  m_text: "Ol\xE1! Bem-vindo \xE0 Sala de Jogos do Reino Amarelo. Preparado para
+    um desafio cheio de energia? Clica no bot\xE3o JOGAR no ecr\xE3!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
   m_sharedMaterial: {fileID: -7160109009091577269, guid: bb1f838fd3ff03649a92ace71b077642, type: 2}
