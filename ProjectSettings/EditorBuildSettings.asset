@@ -44,9 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reino_Verde_Memoria.unity
     guid: a2e53bf123eb5a34fbbd8209d39fff8f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Reino_verde_SalaJogos.unity
-    guid: c6b0b952aaca4724db8ca165291dd411
+    guid: 5c487d4204658d941b32e5bc8520385e
   - enabled: 1
     path: Assets/Scenes/Reino_verde_jogo.unity
     guid: 84e196bc6603c7840a9da56dbcffe931
