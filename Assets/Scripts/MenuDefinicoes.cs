@@ -6,6 +6,7 @@ public class MenuDefinicoes : MonoBehaviour
 {
     [Header("O UI do Menu")]
     public GameObject painelDefinicoes;
+    public GameObject painelCred;
     public Slider sliderGeral;
     public Slider sliderMusica;
     public Slider sliderVideos;
@@ -24,6 +25,7 @@ public class MenuDefinicoes : MonoBehaviour
     void Start()
     {
         painelDefinicoes.SetActive(false);
+        painelCred.SetActive(false);
 
         // O segundo valor (ex: defaultMusica) só é usado se for a primeira vez!
         float volumeGeral = PlayerPrefs.GetFloat("VolumeGeral", defaultGeral);
@@ -52,6 +54,8 @@ public class MenuDefinicoes : MonoBehaviour
 
     public void AbrirPainel() => painelDefinicoes.SetActive(true);
     public void FecharPainel() => painelDefinicoes.SetActive(false);
+    public void AbrirPainelCred() => painelCred.SetActive(true);
+    public void FecharPainelCred() => painelCred.SetActive(false);
 
     public void MudarVolumeGeral(float novoVolume)
     {
